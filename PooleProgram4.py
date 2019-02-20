@@ -1,4 +1,3 @@
-
 #import class library and sqlite3 module
 import sqlite3
 import PooleCLib
@@ -36,7 +35,7 @@ def processing():
                 transaction = PooleCLib.Transactions(transRec)
 
                 if transaction.transItem == 'DEP':
-                    customer.balance += customer.balance + transaction.transAmt
+                    customer.balance += transaction.transAmt
                 else:
 
                     if transaction.transItem in check_numbers:
